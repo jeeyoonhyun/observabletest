@@ -1,0 +1,14 @@
+{
+  "name": "@jeeyoonhyun/bar-chart-race-explained",
+  "main": "f0937c82444a51ad@3096.js",
+  "version": "3096.0.0",
+  "homepage": "https://observablehq.com/@jeeyoonhyun/bar-chart-race-explained",
+  "author": {
+    "name": "Jeeyoon Hyun",
+    "url": "https://observablehq.com/@jeeyoonhyun"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
