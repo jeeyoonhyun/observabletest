@@ -5,19 +5,30 @@
 <link rel="stylesheet" type="text/css" href="./inspector.css">
 <body>
 
+<div id = "title"></div>
+<div id = "description"></div>
+<div id="chart"></div>
 <script type="module">
 
-// import define from "./index.js";
-// import {Runtime, Library, Inspector} from "./runtime.js";
-
-// const runtime = new Runtime();
-// const main = runtime.module(define, Inspector.into(document.body));
 
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@jeeyoonhyun/bar-chart-race-explained.js?v=3";
 
+
+
 const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
+// const main = runtime.module(define, Inspector.into(document.body));
+const main = runtime.module(define, name => {
+    if (name ===  "title" ) {
+    return new Inspector(document.getElementById('title'));
+  }
+    if (name ===  "description" ) {
+    return new Inspector(document.getElementById('description'));
+    }
+    if (name ===  "chart" ) {
+    return new Inspector(document.getElementById('chart'));
+  }
+});
 
 </script>
 </body>
